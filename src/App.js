@@ -1,13 +1,13 @@
-import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
-import { ILLogo } from './assets';
+import { NavigationContainer } from '@react-navigation/native';
+import React from 'react';
+import { StyleSheet } from 'react-native';
+import Router from './router';
 
 const App = () => {
   return (
-    <View>
-      <ILLogo />
-      <Text>Welomen</Text>
-    </View>
+    <NavigationContainer>
+      <Router />
+    </NavigationContainer>
   )
 }
 
