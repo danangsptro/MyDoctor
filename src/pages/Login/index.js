@@ -4,6 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { ILLogo } from '../../assets'
 import { Button, Gap, Input } from '../../components'
 import Link from '../../components/atoms/Link'
+import { colors } from '../../utils'
 
 export default function Login() {
     return (
@@ -24,10 +25,10 @@ export default function Login() {
 }
 
 const styles = StyleSheet.create({
-    page: { padding: 40, backgroundColor: 'white', flex: 1 },
+    page: { padding: 40, backgroundColor: colors.white, flex: 1 },
     title: {
         fontSize: 20,
-        color: '#112340',
+        color: colors.text.primary,
         marginTop: 40,
         marginBottom: 40,
         maxWidth: 153

@@ -3,6 +3,7 @@ import { StyleSheet, Text } from 'react-native'
 import { SafeAreaView } from 'react-native-safe-area-context'
 import { ILLogo } from '../../assets'
 import { useNavigation } from '@react-navigation/native';
+import { colors } from '../../utils';
 
 export default function Splash() {
     const navigation = useNavigation();
@@ -27,7 +28,7 @@ export default function Splash() {
 
 const styles = StyleSheet.create({
     page: {
-        backgroundColor: 'white',
+        backgroundColor: colors.white,
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center'
@@ -35,7 +36,7 @@ const styles = StyleSheet.create({
     title: {
         fontSize: 20,
         fontWeight: '600',
-        color: '#112340',
+        color: colors.text.primary,
         marginTop: 20
     }
 })
