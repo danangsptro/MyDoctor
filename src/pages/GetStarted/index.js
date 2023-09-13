@@ -3,7 +3,7 @@ import React from 'react'
 import { ILGetstarted, ILLogo } from '../../assets'
 import { Button, Gap } from '../../components'
 import { useNavigation } from '@react-navigation/native'
-import { colors } from '../../utils'
+import { colors, fonts } from '../../utils'
 
 export default function GetStarted() {
     const navigation = useNavigation();
@@ -38,5 +38,6 @@ const styles = StyleSheet.create({
         fontWeight: "600",
         marginTop: 91,
         color: colors.white,
+        fontFamily: fonts.primary[600]
     }
 })

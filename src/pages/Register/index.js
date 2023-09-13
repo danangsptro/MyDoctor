@@ -17,7 +17,7 @@ export default function Register({ navigation }) {
         <Gap height={24} />
         <Input label="Password" />
         <Gap height={24} />
-        <Button title="Continue" />
+        <Button title="Continue" onPress={() => navigation.navigate('UploadPhoto')} />
         <Gap height={24} />
       </View>
     </SafeAreaView>

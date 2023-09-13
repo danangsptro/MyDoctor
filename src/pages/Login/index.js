@@ -4,9 +4,11 @@ import { SafeAreaView } from 'react-native-safe-area-context'
 import { ILLogo } from '../../assets'
 import { Button, Gap, Input } from '../../components'
 import Link from '../../components/atoms/Link'
-import { colors } from '../../utils'
+import { colors, fonts } from '../../utils'
+import { useNavigation } from '@react-navigation/native'
 
 export default function Login() {
+    const navigation = useNavigation();
     return (
         <SafeAreaView style={styles.page}>
             <ILLogo />
@@ -17,7 +19,7 @@ export default function Login() {
             <Gap height={24} />
             <Link title="Forgot Password" size={12} />
             <Gap height={40} />
-            <Button title="Sign In" />
+            <Button title="Sign In" onPress={() => navigation.replace('MainApp')}/>
             <Gap height={30} />
             <Link title="Create New Account" size={16} align="center" />
         </SafeAreaView>
@@ -31,6 +33,7 @@ const styles = StyleSheet.create({
         color: colors.text.primary,
         marginTop: 40,
         marginBottom: 40,
-        maxWidth: 153
+        maxWidth: 153,
+        fontFamily: fonts.primary[600]
     }
 })
