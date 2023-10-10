@@ -2,7 +2,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Splash, GetStarted, Register, Login, UploadPhoto, Doctor, Messages, Hospitals } from '../pages';
+import { Splash, GetStarted, Register, Login, UploadPhoto, Doctor, Messages, Hospitals, ChooseDoctor, Chatting } from '../pages';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Navigation } from './Navigation';
 import { BottomNavigator } from '../components';
@@ -30,6 +30,8 @@ const Router = () => {
                 <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
                 <Stack.Screen name="UploadPhoto" component={UploadPhoto} options={{ headerShown: false }} />
                 <Stack.Screen name="MainApp" component={MainApp} options={{ headerShown: false }} />
+                <Stack.Screen name="ChooseDoctor" component={ChooseDoctor} options={{ headerShown: false }} />
+                <Stack.Screen name="Chatting" component={Chatting} options={{ headerShown: false }} />
             </Stack.Navigator>
         </NavigationContainer>
     )

@@ -3,8 +3,11 @@ import React from 'react'
 import { DoctorCategory, Gap, HomeProfile, NewsItem, RatedDoctor } from '../../components'
 import { colors, fonts } from '../../utils'
 import { JSONCategoryDoctor } from '../../assets'
+import { useNavigation } from '@react-navigation/native'
 
 export default function Doctor() {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.page}>
       <View style={styles.content}>
@@ -20,7 +23,7 @@ export default function Doctor() {
                 <Gap width={32} />
                 {
                   JSONCategoryDoctor.data.map(item => {
-                    return <DoctorCategory key={item.id} category={item.category} />
+                    return <DoctorCategory key={item.id} category={item.category} onPress={() => navigation.navigate('ChooseDoctor') } />
                   })
                 }
                 <Gap width={22} />
