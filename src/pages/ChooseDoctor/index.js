@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { SafeAreaView } from 'react-native-safe-area-context'
-import { Header, ListDoctor } from '../../components'
+import { Header, List } from '../../components'
 import { DummyDoctor1 } from '../../assets'
 import { colors } from '../../utils'
 import { useNavigation } from '@react-navigation/native'
@@ -11,11 +11,11 @@ const ChooseDoctor = () => {
     return (
         <SafeAreaView style={styles.page}>
             <Header type={'dark'} title={'Pilih Dokter Anak'} onPress={() => navigation.goBack()} />
-            <ListDoctor type={'next'} profile={DummyDoctor1} name={'Alexandri'} onPress={() => navigation.navigate('Chatting')} />
-            <ListDoctor type={'next'} profile={DummyDoctor1} name={'Alexandri'} />
-            <ListDoctor type={'next'} profile={DummyDoctor1} name={'Alexandri'} />
-            <ListDoctor type={'next'} profile={DummyDoctor1} name={'Alexandri'} />
-            <ListDoctor type={'next'} profile={DummyDoctor1} name={'Alexandri'} />
+            <List type={'next'} profile={DummyDoctor1} name={'Alexandri'} onPress={() => navigation.navigate('Chatting')} />
+            <List type={'next'} profile={DummyDoctor1} name={'Alexandri'} />
+            <List type={'next'} profile={DummyDoctor1} name={'Alexandri'} />
+            <List type={'next'} profile={DummyDoctor1} name={'Alexandri'} />
+            <List type={'next'} profile={DummyDoctor1} name={'Alexandri'} />
             <Text>Choose Doctor</Text>
         </SafeAreaView>
 

@@ -5,8 +5,8 @@ import { colors, fonts } from '../../../utils'
 import DarkProfile from './DarkProfile'
 
 export default function Header({ onPress, title, type }) {
-    if (type === 'dark') {
-        <DarkProfile />;
+    if (type === 'dark-profile') {
+        return <DarkProfile onPress={onPress} />;
     }
     return (
         <View style={styles.container(type)}>

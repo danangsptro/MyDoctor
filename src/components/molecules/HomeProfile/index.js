@@ -1,17 +1,22 @@
-import { Image, StyleSheet, Text, View } from 'react-native'
+import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React from 'react'
 import { DummyUser } from '../../../assets'
 import { colors, fonts } from '../../../utils'
+import { useNavigation } from '@react-navigation/native'
 
-const HomeProfile = () => {
+const HomeProfile = ({ onPress }) => {
+    const navigation = useNavigation();
+
     return (
-        <View style={styles.container}>
-            <Image source={DummyUser} style={styles.avatar} />
-            <View>
-                <Text style={styles.name}>Qumo Zaki</Text>
-                <Text style={styles.profession}>Senior Frontend Developer</Text>
+        <TouchableOpacity onPress={onPress}>
+            <View style={styles.container}>
+                <Image source={DummyUser} style={styles.avatar} />
+                <View>
+                    <Text style={styles.name}>Qumo Zaki</Text>
+                    <Text style={styles.profession}>Senior Frontend Developer</Text>
+                </View>
             </View>
-        </View>
+        </TouchableOpacity>
     )
 }
 
