@@ -9,19 +9,19 @@ export default function Messages() {
     {
       id: 1,
       profile: DummyDoctor1,
-      name: 'Alexander',
+      name: 'Cuaks',
       desc: 'Baik bu, terima kasih atas waktunya...'
     },
     {
       id: 2,
       profile: DummyDoctor2,
-      name: 'Alexander',
+      name: 'Chiaks',
       desc: 'Baik bu, terima kasih atas waktunya...'
     },
     {
       id: 3,
       profile: DummyDoctor3,
-      name: 'Alexander',
+      name: 'Choco',
       desc: 'Baik bu, terima kasih atas waktunya...'
     }
   ]);
@@ -33,7 +33,6 @@ export default function Messages() {
           doctors.map(doctor => {
             return <List
               key={doctor.id}
-              profile={doctor.profile}
               name={doctor.name}
               desc={doctor.desc} />
           })

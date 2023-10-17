@@ -5,11 +5,14 @@ import { Button, Gap, Header } from '../../components'
 import { ILNullPhoto, IconAddPhoto } from '../../assets'
 import Link from '../../components/atoms/Link'
 import { colors, fonts } from '../../utils'
+import { useNavigation } from '@react-navigation/native'
 
 export default function UploadPhoto() {
+    const navigation = useNavigation();
+
     return (
         <SafeAreaView style={styles.page}>
-            <Header title="Upload Photo" />
+            <Header title="Upload Photo" onPress={() => navigation.goBack()} />
             <View style={styles.content}>
                 <View style={styles.profile}>
                     <View style={styles.avatarWrapper}>
@@ -20,9 +23,9 @@ export default function UploadPhoto() {
                     <Text style={styles.profession}>CEO</Text>
                 </View>
                 <View>
-                    <Button title="Upload and Continue" />
+                    <Button title="Upload and Continue" onPress={() => navigation.replace('MainApp')} />
                     <Gap height={30} />
-                    <Link title="Skip for this" align='center' size={16} />
+                    <Link title="Skip for this" align='center' size={16} onPress={() => navigation.replace('MainApp')} />
                 </View>
             </View>
         </SafeAreaView>

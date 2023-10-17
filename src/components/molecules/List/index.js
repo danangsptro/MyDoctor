@@ -7,16 +7,20 @@ const List = ({ profile, name, desc, type, onPress, icon }) => {
     const Icon = () => {
         if (icon === 'edit-profile') {
             return <IconEditProfile />
-        } else if (icon === 'languange') {
-            return <IconLanguage />
-        } else if (icon === 'rate') {
-            return <IconRate />
-        } else if (icon === 'help') {
-            return <IconHelp />
-        } else {
-            return <IconEditProfile />
         }
+        if (icon === 'languange') {
+            return <IconLanguage />
+        }
+        if (icon === 'rate') {
+            return <IconRate />
+        }
+        if (icon === 'help') {
+            return <IconHelp />
+        }
+        return <IconEditProfile />
+
     }
+    console.log(icon, 'haha')
     return (
         <TouchableOpacity style={styles.container} onPress={onPress}>
             {Icon ? <Icon /> : <Image source={profile} style={styles.avatar} />}

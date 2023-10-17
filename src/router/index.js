@@ -1,10 +1,8 @@
-import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { Splash, GetStarted, Register, Login, UploadPhoto, Doctor, Messages, Hospitals, ChooseDoctor, Chatting, UserProfile } from '../pages';
+import { Splash, GetStarted, Register, Login, UploadPhoto, Doctor, Messages, Hospitals, ChooseDoctor, Chatting, UserProfile, UpdateProfile, DoctorProfile } from '../pages';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Navigation } from './Navigation';
 import { BottomNavigator } from '../components';
 
 const Stack = createNativeStackNavigator();
@@ -33,6 +31,8 @@ const Router = () => {
                 <Stack.Screen name="ChooseDoctor" component={ChooseDoctor} options={{ headerShown: false }} />
                 <Stack.Screen name="Chatting" component={Chatting} options={{ headerShown: false }} />
                 <Stack.Screen name="UserProfile" component={UserProfile} options={{ headerShown: false }} />
+                <Stack.Screen name="UpdateProfile" component={UpdateProfile} options={{ headerShown: false }} />
+                <Stack.Screen name="DoctorProfile" component={DoctorProfile} options={{ headerShown: false }} />
             </Stack.Navigator>
         </NavigationContainer>
     )

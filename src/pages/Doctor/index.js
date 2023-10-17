@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, ScrollView } from 'react-native'
 import React from 'react'
 import { DoctorCategory, Gap, HomeProfile, NewsItem, RatedDoctor } from '../../components'
 import { colors, fonts } from '../../utils'
-import { JSONCategoryDoctor } from '../../assets'
+import { DummyDoctor1, DummyDoctor2, DummyDoctor3, JSONCategoryDoctor } from '../../assets'
 import { useNavigation } from '@react-navigation/native'
 
 export default function Doctor() {
@@ -32,9 +32,9 @@ export default function Doctor() {
           </View>
           <View style={styles.wrapperSection}>
             <Text style={styles.sectionLabel}>Top Rated Doctors</Text>
-            <RatedDoctor />
-            <RatedDoctor />
-            <RatedDoctor />
+            <RatedDoctor name="Alexa Rachel" desc="Pediatrician" avatar={DummyDoctor2} onPress={() => navigation.navigate('DoctorProfile')} />
+            <RatedDoctor name="Zero Hamburg" desc="Zamuandi" avatar={DummyDoctor3} onPress={() => navigation.navigate('DoctorProfile')} />
+            <RatedDoctor name="Jazio Yani" desc="Qataui" avatar={DummyDoctor1} onPress={() => navigation.navigate('DoctorProfile')} />
             <Text style={styles.sectionLabel}>Good News </Text>
           </View>
           <NewsItem />
